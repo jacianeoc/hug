@@ -1,0 +1,25 @@
+*{
+    margin:0;
+    top: 0;
+    box-sizing: border-box;
+}
+/*elemento raiz do html*/
+:root{
+    font-size: 62.5%;/*isso equivale a 10px*/
+}
+
+body,html{
+    height: 100vh;
+    color: white;
+}
+
+body, input, button, textarea{
+    font-size: 1.6rem;
+    line-height: 1;
+    font-weight: 400;
+    font-family: 'Nunito', sans-serif;
+    /*font: 400 1.8rem/1 'Nunito', sans-serif 
+    isso é a mesma coisa disso de cima*/
+
+}
+

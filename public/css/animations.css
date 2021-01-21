@@ -1,0 +1,51 @@
+
+/*animaçoes*/
+@keyframes up{
+    from{
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.animate-up{
+    animation: up 300ms backwards;
+}
+/*tempo de animação de cada um*/
+
+#logo{
+    animation-delay: 50ms;
+}
+.location{
+    animation-delay: 100ms;
+}
+
+main h1 {
+    font-size: clamp(3rem, 7vw, 7rem );/*a largura do doc vai ser 8 pedacinhos do 100*/
+    animation-delay: 150ms;
+}
+.visit p {
+    animation-delay: 200ms;
+}
+.visit a {
+    animation-delay: 250ms;
+}
+
+
+
+@keyframes right {
+    from{
+    
+        transform: translateX(-100%);
+    }
+    to{
+    
+        transform: translateX(0);
+    }
+}
+.animate-rigth{
+    animation: right;
+    animation-duration: 300ms;
+}
