@@ -26,7 +26,7 @@ aside h2 {
 }
 aside p {
     margin-top: 2.4rem;
-    font: 400 clamp(1rem, 3vw, 3rem)/1.1 'Nunito', sans-serif;
+    font: 400 clamp(1rem, 2.5vw, 2.3rem)/1.1 'Nunito', sans-serif;
 }
 aside footer{
     line-height: 0;
@@ -119,6 +119,6 @@ popup
     display: none;
 }
 .leaflet-container{
-    z-index: 5;
+    z-index: 10;
     font: 600 1.2rem/1 'Nunito', sans-serif;
 }

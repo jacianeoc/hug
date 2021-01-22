@@ -3,39 +3,88 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Localize um abrigo</title>
+        <title>abrigo</title>
+
+        <!-- lib leafletjs-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+        <!-- Make sure you put this AFTER Leaflet's CSS -->
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+
         <link rel="icon" href="./public/images/outline.svg" type="image/x-icon">
         <link rel="stylesheet" href="./public/css/style.css">
         <link rel="stylesheet" href="./public/css/animations.css">
 
-        <link rel="stylesheet" href="./public/css/page-centers.css ">
+        <link rel="stylesheet" href="./public/css/page-center.css ">
         <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet"> 
 
     </head>
     <body>
-        <div id="page-centers">
-            <aside class="animate-rigth  ">
-                <header>
-                    <img  id="logo"src="./public/images/logo.svg" alt="logo hug" >
-                    <h2>escolha um centro de adoção no mapa</h2>
-                    <p>pet é vida :)</p>
-                </header>
+        <div id="page-center">
+            <aside class="animate-rigth sidebar "> 
+                <img src="./public/images/logo.svg" alt="hug" >
                 <footer>
-                    <strong>Campina Grande</strong>
-                    <p>Paraiba</p>
+                    <button onclick="history.back()"> <img src="./public/images/back.svg" alt="voltar">
+                    </button>
                 </footer>
             </aside>
-        
-            
-            <div id="mapid"></div>
+            <main class="center-details animate-appear with-sidebar">
+                <img src="./public/images/dog-center.jpeg" alt="foto do centro de adocao" >
+                <div class="images">
+                    <button class="active" type="button">
+                        <img src="./public/images/dog-center.jpeg" alt="centro de dog" >
+                    </button>
+                    <button class="active" type="button">
+                        <img src="./public/images/dog-center.jpeg" alt="centro de dog" >
+                    </button>        <button class="active" type="button">
+                        <img src="./public/images/dog-center.jpeg" alt="centro de dog" >
+                    </button>        <button class="active" type="button">
+                        <img src="./public/images/dog-center.jpeg" alt="centro de dog" >
+                    </button>        <button class="active" type="button">
+                        <img src="./public/images/dog-center.jpeg" alt="centro de dog" >
+                    </button>        <button class="active" type="button">
+                        <img src="./public/images/dog-center.jpeg" alt="centro de dog" >
+                    </button>        <button class="active" type="button">
+                        <img src="./public/images/dog-center.jpeg" alt="centro de dog" >
+                    </button>
+                </div>
+                <div class="center-details-content">
+                    <h1>lar dos dogs</h1>
+                    <p>
+                        Doação de cachorros e gatos que tem apoio da comunidade local                    </p>
+                </div>
+                <div class="map-container">
+                    <div id="mapid"></div>
+                    <footer>
+                        <a href=""> Ver rotas no Google Maps</a>
+                    </footer>
+                </div>
+                <hr>
+                <h2>Instruções para visita</h2>
+                <p>venha e leve muito amor para sua casa</p>
+                <div class="open-details">
+                    <div class="hour">
+                        <img src="./public/images/time.svg" alt="horarios" srcset="">
+                        Horarios de funcionamento Das 8h as 18h
+                    </div>
+                    <div class="open-on-weekends">
+                        <img src="./public/images/info.svg" alt="informações" srcset="">
+                        Funcionamos dos fins de semanas
+                    </div>
+                    <button class="primary-button" type="button">
+                        <img src="./public/images/whatsapp.svg" alt="chamar no whatsapp" srcset="">
+                        Entrar em contato
+                    </button>
+                </div>
 
-            <a href="create-center.html" class="create-center" title="cadastre um centro de adoção">
-                <img src="./public/images/Union.svg" alt="criar centro de adoção" >
-
-            </a>
+            </main>
 
         </div>
-        
+        <script src="./public/scripts/page-center.js"></script>
     </body>
 </html>

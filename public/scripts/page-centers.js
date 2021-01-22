@@ -18,6 +18,6 @@ const popup= L.popup({
     className: 'map-popup',
     minWidth: 240,
     minHeight: 240
-}).setContent('Lar dos gatinhos <a href="centers.html?1" class= "choose-center"> <img src="./public/images/Arrow 1.svg" > </a>')
+}).setContent('Lar dos gatinhos <a href="center.html?1" class= "choose-center"> <img src="./public/images/Arrow 1.svg" > </a>')
 L.marker([-7.226376,-35.8814862], {icon}).addTo(map)
     .bindPopup(popup);
