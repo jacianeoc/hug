@@ -1,6 +1,9 @@
 #page-center{
     display: flex;
+    flex-direction: column;
     min-height: 100vh;
+
+
 }
 
 aside.sidebar{
@@ -16,8 +19,7 @@ aside.sidebar{
 
 }
 
-
-aside.sidebar footer button{
+aside .sidebar footer button{
     width: 60px;
     height: 60px;
     border: none;
@@ -33,13 +35,11 @@ aside.sidebar footer button{
     transition: background-color 0.2s;
 
 }
-aside.sidebar footer  :hover{
+aside .sidebar footer  :hover{
     background:  #00ff95;
 }
 
-main{
-    align-items: center;
-}
+
 .center-details-content{
     padding: 0 2.6rem;
 }
@@ -53,9 +53,11 @@ details
     background: white;
     border: 1px solid #e3f5ed;
     border-radius: 1.3rem;
-    margin-left: 180px;
+    /*margin-left: 180px;*/
     overflow: hidden;
 }
+
+
 
 /*pega a imagem que tá no primeiro nivel*/
 .center-details > img{
