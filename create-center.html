@@ -44,6 +44,10 @@
 
                         <div class="map-container">
                             <div id="mapid"></div>
+
+                            <input type="hidden" name="lat">
+                            <input type="hidden" name="lng">
+
                             <footer>
                                 <a href="#" id="select-point">
                                     clique no mapa para adicionar a localização
@@ -53,27 +57,34 @@
 
                         <div class="input-block">
                             <label for="name">Nome</label>
-                            <input id="name" type="text" name="name">
+                            <input id="name" type="text" name="name" required>
                         </div>
 
                         <div class="input-block">
                             <label for="about">Sobre <span>Máximo de 300 caracteres</span></label>
-                            <textarea  id="about" type="text" name="abut"></textarea>
+                            <textarea  id="about" type="text" name="abut" required></textarea>
                         </div>
 
                         <div class="input-block">
                             <label for="whatsapp">Número de whatsapp</label>
-                            <input id="whatsapp" type="text" name="whatsapp">
+                            <input id="whatsapp" type="text" name="whatsapp" required>
                         </div>
 
-                        <div class="input-block">
+                        <div class="input-block images">
+                            
                             <label for="images">Fotos</label>
+                            
                             <div class="images-upload" id="images" >
-                                <input name="images" placeholder="Cole o link da foto aqui">
-                                <button type="button">
-                                    <img src="./public/images/union2.svg" alt="" srcset="">
-                                </button>
-                            </div>
+                                <div class="new-upload">
+                                    <input name="images" placeholder="Cole o link da foto aqui" required>
+                                    <span onclick="deleteField(event)"><img src="./public/images/close.svg" alt="excluir"></span>
+                                </div>
+                                
+                            </div> 
+
+                            <button  id= "addPhoto"type="button">
+                                    <img src="./public/images/union2.svg" alt="nova imagem" srcset="">
+                            </button>
                         </div>
 
                     </fieldset>
@@ -82,12 +93,12 @@
 
                         <div class="input-block">
                             <label for="instructions">Instruções<span>Máximo de 300 caracteres</span></label>
-                            <textarea  id="instructions" type="text" name="instructions"></textarea>
+                            <textarea  id="instructions" type="text" name="instructions" required></textarea>
                         </div>
 
                         <div class="input-block">
                             <label for="opening_hours">Horário de visitas</label>
-                            <input id="opening_hours" type="text" name="opening_hours">
+                            <input id="opening_hours" type="text" name="opening_hours" required>
                         </div>
 
                         <div class="input-block">
