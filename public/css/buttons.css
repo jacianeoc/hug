@@ -40,9 +40,9 @@
 
 }
 .button-select button.active {
-    background: #d8fdee;
+    background: #88dfbb;
     border: 1px solid  #9dffd6 ;
-    color: #03cf7a;
+    color: #032416;
 }
 .button-select button:first-child{
     border-radius: 1rem 0 0 1rem;

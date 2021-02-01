@@ -84,3 +84,23 @@ function deleteField(event){
     span.parentNode.remove();
     console.log('tirando');
 }
+
+
+/***** select yer or not*****/
+function toggleSelect(event) { 
+    
+    //retirar a class active 
+    document.querySelectorAll('.button-select button')
+    .forEach(button => button.classList.remove('active'));
+
+    //pegar o butão clicado e colocar a class active
+    const button = event.currentTarget
+    button.classList.add('active');
+
+    //atualizar o input com o valor selecionado
+    const input = document.querySelector('[name = "open_on_weekends"]');
+
+    //verificar se e sim ou nao
+    input.value = button.dataset.value
+
+}
