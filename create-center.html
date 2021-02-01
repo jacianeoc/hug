@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>adicionar um abrigo</title>
+
+        <!-- lib leafletjs-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+        <!-- Make sure you put this AFTER Leaflet's CSS -->
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+
+        <link rel="icon" href="./public/images/outline.svg" type="image/x-icon">
+        <link rel="stylesheet" href="./public/css/style.css">
+        <link rel="stylesheet" href="./public/css/animations.css">
+
+        <link rel="stylesheet" href="./public/css/buttons.css">
+        <link rel="stylesheet" href="./public/css/forms.css">
+        <link rel="stylesheet" href="./public/css/map.css">
+        <link rel="stylesheet" href="./public/css/sidebar.css ">
+        <link rel="stylesheet" href="./public/css/page-create-center.css ">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet"> 
+
+    </head>
+    <body>
+        <div id="create-center">
+            <aside class="animate-rigth sidebar "> 
+                <img src="./public/images/logo.svg" alt="hug" >
+                <footer>
+                    <button onclick="history.back()"> <img src="./public/images/back.svg" alt="voltar">
+                    </button>
+                </footer>
+            </aside>
+            <main class="animate-appear with-sidebar">
+                <form action="">
+                    <fieldset>
+                        <legend>Dados</legend>
+
+                        <div class="map-container">
+                            <div id="mapid"></div>
+                            <footer>
+                                <a href="#" id="select-point">
+                                    clique no mapa para adicionar a localização
+                                </a>
+                            </footer>
+                        </div>
+
+                        <div class="input-block">
+                            <label for="name">Nome</label>
+                            <input id="name" type="text" name="name">
+                        </div>
+
+                        <div class="input-block">
+                            <label for="about">Sobre <span>Máximo de 300 caracteres</span></label>
+                            <textarea  id="about" type="text" name="abut"></textarea>
+                        </div>
+
+                        <div class="input-block">
+                            <label for="whatsapp">Número de whatsapp</label>
+                            <input id="whatsapp" type="text" name="whatsapp">
+                        </div>
+
+                        <div class="input-block">
+                            <label for="images">Fotos</label>
+                            <div class="images-upload" id="images" >
+                                <input name="images" placeholder="Cole o link da foto aqui">
+                                <button type="button">
+                                    <img src="./public/images/union2.svg" alt="" srcset="">
+                                </button>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                    <fieldset>
+                        <legend>Visitação</legend>
+
+                        <div class="input-block">
+                            <label for="instructions">Instruções<span>Máximo de 300 caracteres</span></label>
+                            <textarea  id="instructions" type="text" name="instructions"></textarea>
+                        </div>
+
+                        <div class="input-block">
+                            <label for="opening_hours">Horário de visitas</label>
+                            <input id="opening_hours" type="text" name="opening_hours">
+                        </div>
+
+                        <div class="input-block">
+                            <label for="open_on_weekends">Atende fim de semana?</label>
+                            <input id="open_on_weekends" type="hidden" name="open_on_weekends" value="1">
+                            <div class="button-select">
+                                <button type="button" class="active">Sim</button>
+                                <button type="button">Não</button>
+                            </div>
+                            <button type="submit" class="primary-button">
+                                Confirmar
+                            </button>
+                        </div>
+                    </fieldset>
+                </form>
+            </main>
+
+        </div>
+        <script src="./public/scripts/page-create-center.js"></script>
+    </body>
+</html>

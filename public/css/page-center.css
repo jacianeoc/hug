@@ -6,40 +6,6 @@
 
 }
 
-aside.sidebar{
-    position: fixed;
-    height: 100%;
-    padding: 30px 20px;
-    background: #6bd6a9;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-aside .sidebar footer button{
-    width: 60px;
-    height: 60px;
-    border: none;
-    border-radius: 1.2rem;
-
-    background:  #03cf7a;
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: background-color 0.2s;
-
-}
-aside .sidebar footer  :hover{
-    background:  #00ff95;
-}
-
-
 .center-details-content{
     padding: 0 2.6rem;
 }
@@ -118,38 +84,7 @@ details
     margin-top: 2.4rem;
 }
 
-/***
-Map
-***/
 
-.map-container{
-    margin-top: 6rem;
-    background-color:  rgb(225, 245, 235);
-    border: 1px solid #e3f5ed;
-    border-radius: 1rem;
-}
-
-#mapid{
-    width: 100%;
-    height: 25rem;
-
-}
-
-.map-container footer{
-    padding: 1rem 0;
-
-    text-align: center;
-}
-
-.map-container footer a {
-    color: #03cf7a;
-    text-decoration: none;
-}
-
-.map-container .leaflet-container{
-    border-bottom: 1px solid  #e3f5ed;
-    border-radius: 1rem;
-}
 .center-details-content hr {
     width: 100%;
     height: 3px;
@@ -198,28 +133,3 @@ Map
     border-width: 50px;
 }
 
-.primary-button {
-    margin-top: 6rem;
-    margin-bottom: 2rem;
-    width: 100%;
-    height: 5rem;
-    border: none;
-    cursor: pointer;
-
-    background: #6bd6a9;
-
-    border-radius: 1.5rem;
-    color: white;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.2s;
-}
-.primary-button :hover{
-    background: #03cf7a;
-}
-.primary-button img {
-    width: 80px;
-    padding-right: 1.2rem;
-}

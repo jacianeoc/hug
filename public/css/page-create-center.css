@@ -1,0 +1,18 @@
+#create-center{
+    display: flex;
+
+}
+
+main {
+    flex: 1;
+}
+.map-container {
+    margin: 0 0 3rem;
+}
+.map-container .leaflet-container{
+    border-radius: 20px  20px 0 0;
+}
+.map-container footer{
+    background: rgb(238, 253, 246);
+    border-radius: 0 0 20px 20px;
+}
