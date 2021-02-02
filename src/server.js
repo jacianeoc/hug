@@ -1,27 +1,24 @@
 //importar dependencia 
 const express = require('express');
 const path = require('path');
-
+const pages = require('./pages.js');
 
 const server = express();
-
-//utilizando arquivos estáricos 
-server.use(express.static('public'));
 
 
 //criando uma rota 
 server
+//utilizando arquivos estáricos 
+.use(express.static('public'))
 
 //configurar  template engine (ela pode enviar datas para o html
 //executar por lá)
 .set('views', path.join(__dirname, 'views'))
 
 .set('view engine', 'hbs')
-.get('/', (req, res)=> {
-    //uma funçao que pede onde tá o arquivo
-    return res.render('index');
-}
-);
-
+.get('/', pages.index) //no certo momento ele vai executar, quando tiver na pagina das pages
+.get('/center', pages.center)
+.get('/centers', pages.centers)
+.get('/create-center', pages.createCenter)
 //ligar o servidor
 server.listen(5500)

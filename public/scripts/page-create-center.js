@@ -7,7 +7,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 //create icon
 const icon= L.icon({
-    iconUrl:'./public/images/marcacao1.svg',
+    iconUrl:'/images/marcacao1.svg',
     iconSize: [90,90],
     iconAnchor:[29,68],
 
