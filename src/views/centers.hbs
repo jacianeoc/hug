@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Localize um abrigo</title>
+
+        <!-- lib leafletjs-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin=""/>
+        <!-- Make sure you put this AFTER Leaflet's CSS -->
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+
+        <link rel="icon" href="./public/images/outline.svg" type="image/x-icon">
+        <link rel="stylesheet" href="./public/css/style.css">
+        <link rel="stylesheet" href="./public/css/animations.css">
+
+        <link rel="stylesheet" href="./public/css/page-centers.css ">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet"> 
+
+    </head>
+    <body>
+        <div id="page-centers">
+            <aside class="animate-rigth  ">
+                <header>
+                    <img  id="logo"src="./public/images/logo.svg" alt="logo hug" >
+                    <h2>escolha um centro de adoção no mapa</h2>
+                    <p>pet é vida :)</p>
+                </header>
+                <footer>
+                    <strong>Campina Grande</strong>
+                    <p>Paraiba</p>
+                </footer>
+            </aside>
+        
+            
+            <div id="mapid" class="animate-appear"></div>
+
+            <a href="create-center.html" class="create-center" title="cadastre um centro de adoção">
+                <img src="./public/images/Union.svg" alt="criar centro de adoção" >
+
+            </a>
+
+        </div>
+        <script src="./public/scripts/page-centers.js"></script>
+    </body>
+</html>

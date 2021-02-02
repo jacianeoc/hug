@@ -1,0 +1,98 @@
+
+#page-landing {
+    /*deg é como vai rotacionar o elemento */
+    background: linear-gradient(329.54deg,#03FD94  0%,#6bd6a9 100%) no-repeat;
+
+    min-height: 100vh;
+    text-align: center;
+
+    /*são regras de exibição*/
+    display: flex;
+
+}
+#container{
+    /*ele só consegue alinhar se o anterior for flex*/
+    margin: auto;
+    width: min(90%, 112rem);
+}
+
+.location, h1, .visit p {
+    height: 16vh;
+}
+@media(max-width: 388px){
+    .visit p{
+        padding-top:30% ;
+    }
+}
+
+.visit a {
+    width: 5rem;
+    height: 5rem;
+
+    background: #1D566E;
+    border: none;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center; /*vai mexer sempre de cima para baixo no
+    no eixo y para alinha no eixo x e o de baixo e o do outro lado*/
+    justify-content: center;
+    margin: auto;
+    transition: background 200ms;
+}
+
+.visit a:hover{
+    background: #21ABA5;
+}
+
+
+/********
+desktop version
+*********/
+@media(min-width: 760px){
+    #container{
+        /*shorthand essa /  é para colocar um tamanho da imagem */
+        background: url(../images/Adopt\ a\ pet-amico-2.svg) no-repeat 80% / clamp(25rem, 49vw, 45rem);
+        padding-bottom: 1rem;
+
+    }
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .location, h1, .visit p {
+        
+        height: initial;/*pegar antes mesmo das regras css*/
+        text-align: initial;
+    }
+    .location{
+        text-align: right;
+        font-size: 2rem;
+        line-height: 1.5;
+    }
+    main h1{
+        
+        font-weight: bold;
+        line-height: .88;
+
+        margin: clamp(5%, 7vh, 9%) 0 5rem;
+
+        width: min(300px, 70%);
+    } 
+    .visit{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .visit p{
+        font-size: 2rem;
+        line-height: 1.2;
+        width: clamp(20rem, 20vw,30rem);
+
+    }
+    .visit a {
+        margin: 0;
+    }
+    
+
+}  

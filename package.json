@@ -1,0 +1,16 @@
+{
+  "name": "hug",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jacianeoc/hug.git",
+  "author": "Jaciane Cruz <jaciane.cruz@ccc.ufcg.edu.br>",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1",
+    "nodemon": "^2.0.7"
+  }
+}
