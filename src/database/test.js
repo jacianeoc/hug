@@ -30,7 +30,7 @@ Database.then(async db => {
     
     //consultar dados na tabela
     // aqui é seleciona todos os campos da tabela 
-    const selectedCenters = await db.all("SELECT * FROM centers")*/
+    const selectedCenters = await db.all("SELECT * FROM centers")
 
     //consultar somente um centro de doação
     const center = await db.all('SELECT * FROM centers WHERE   id = "2" ')
