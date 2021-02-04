@@ -103,6 +103,8 @@ details
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 1.8rem;
+
+    line-height: 1.5;
 }
 
 .open-details div {
@@ -111,7 +113,7 @@ details
 
 }
 .open-details .hour{
-    background: linear-gradient(149.97deg, rgb(237, 243, 241) 8.13%, rgb(225, 245, 235)100% );
+    background: linear-gradient(149.97deg, rgb(172, 240, 220) 8.13%, #FFF 100% );
     border: 1px solid #6bd6a9;
 
     border-radius: 20px;
@@ -121,13 +123,21 @@ details
     width: 50px;
     
 }
-.open-details .open-on-weekends{
-    background: linear-gradient(149.97deg, rgb(231, 241, 238) 7.13%, rgb(225, 245, 235)98% );
-    border: 1px solid #6bd6a9;
-
+.open-details .open-on-weekends{  
     border-radius: 20px;
 }
+.open-on-weekends.open{
+    background: linear-gradient(154.16deg, rgb(172, 240, 220) 7.13%, #FFF 98% );
+    border: 1px solid #6bd6a9;
+}
+.open-on-weekends.closed{
+    background: linear-gradient(154.16deg, #FCF0F4 7.13%, #FFF 98% );
+    border: 1px solid #FFBCD4;
+    color: #FF669D;
+}
+
 .open-details .open-on-weekends img {
+    
     color:#6bd6a9;
     width: 50px;
     border-width: 50px;

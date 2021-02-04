@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>abrigo</title>
+        <title>{{center.name}}</title>
 
         <!-- lib leafletjs-->
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
@@ -37,65 +37,65 @@
                 </footer>
             </aside>
             <main class="center-details animate-appear with-sidebar">
-                <img src="/images/dog-center.jpeg" alt="foto do centro de adocao" >
+                <img src="{{center.firstImg}}" alt="{{center.name}}" >
                 <div class="images">
-                    <button onclick="selectImage(event )" class="active" type="" alt="centro de dog" >
-                        <img src="https://source.unsplash.com/random?id=1" alt="centro de dog" >
+                    {{#each center.images}}
+                    <button onclick="selectImage(event )" class="active" type="" alt="{{center.name}}" >
+                        <img src="{{this}}" alt="{{center.name}}" >
 
                     </button>
-
-                    <button onclick="selectImage(event)"  type="button">
-                        <img src="https://source.unsplash.com/random?id=2" alt="centro de dog" >
-
-                    </button> 
-
-                    <button onclick="selectImage(event)"  type="button">
-                        <img src="https://source.unsplash.com/random?id=3" alt="centro de dog" >
-
-                    </button> 
-
-                    <button onclick="selectImage(event)"  type="button">
-                        <img src="https://source.unsplash.com/random?id=4" alt="centro de dog" >
-
-                    </button>
-
-                    <button onclick="selectImage(event)"  type="button">
-                        <img src="https://source.unsplash.com/random?id=5" alt="centro de dog" >
-
-                    </button> 
-
-                    <button onclick="selectImage(event)" type="button">
-                        <img src="https://source.unsplash.com/random?id=6" alt="centro de dog" >
-
+                    {{/each}}
                 </div>
                 <div class="center-details-content">
-                    <h1>lar dos dogs</h1>
+                    <h1>{{center.name}}</h1>
                     <p>
-                        Doação de cachorros e gatos que tem apoio da comunidade local                    </p>
+                        {{center.about}}
+                    </p>
                 
                     <div class="map-container">
                         <div id="mapid"></div>
+                        <span hidden
+                        data-lat="{{center.lat}}"
+                        data-lng="{{center.lng}}">
+                        </span>
                         <footer>
-                            <a href=""> Ver rotas no Google Maps</a>
+                            <a 
+                            target="_blank"
+                            href="http://maps.google.com/mobile?q={{center.lat}},{{center.lng}}&z=16"> Ver rotas no Google Maps</a>
                         </footer>
                     </div>
                     <hr>
                     <h2>Instruções para visita</h2>
-                    <p>venha e leve muito amor para sua casa</p>
+                    <p>{{center.instructions}}</p>
                     <div class="open-details">
                         <div class="hour">
-                            <img src="/images/time.svg" alt="horarios" srcset="">
-                            Horario de funcionamento Das 8h as 18h
+                            <img src="/images/time.svg" alt="horarios" srcset=""><br>
+                            {{center.opening_hours}}
                         </div>
-                        <div class="open-on-weekends">
-                            <img src="/images/info.svg" alt="informações" srcset="">
-                            Funcionamos dos fins de semanas
-                        </div>
+
+                        {{#if center.open_on_weekends}}
+                            <div class="open-on-weekends open">
+                            
+                                <img src="/images/info.svg" alt="informações" srcset=""><br>
+                                Abrimos nos finais de semanas
+                            
+                            </div>
+                            {{else}}
+                            <div class="open-on-weekends closed">
+                            
+                                <img src="/images/info red.svg" alt="informações" srcset=""><br>
+                                Não abrimos nos finais de semanas
+                            
+                            </div>
+                        {{/if}}
+                        
                     </div>    
-                    <button class="primary-button" type="button">
+                    <a href="http://api.whatsapp.com/send?l=pt_BR&phone={{center.whatsapp}}"
+                    target="_blank"
+                    class="primary-button" type="button">
                         <img src="/images/whatsapp.svg" alt="chamar no whatsapp" srcset="">
                         Entrar em contato
-                    </button>
+                    </a>
                     
                 </div>
             </main>

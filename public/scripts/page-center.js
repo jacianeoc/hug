@@ -7,8 +7,12 @@ const opitons = {
     scrollWheelZoom: false,
     zoomControl: false
 }
+
+const spanLat = document.querySelector('span[data-lat]');
+const spanLng = document.querySelector('span[data-lng]');
+
 //create map
-const map = L.map('mapid', opitons).setView([-7.226376,-35.8814862], 15);
+const map = L.map('mapid', opitons).setView([spanLat.dataset.lat,spanLng.dataset.lng], 15);
 
 
 
@@ -18,13 +22,12 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 const icon= L.icon({
     iconUrl:'/images/marcacao1.svg',
-    iconSize: [68,68],
+    iconSize: [90,90],
     iconAnchor:[29,68],
     popupAnchor: [150, -75]
 });
 
-
-L.marker([-7.226376,-35.8814862], {icon}).addTo(map)
+L.marker([spanLat.dataset.lat,spanLng.dataset.lng], {icon}).addTo(map)
 
 /*image gallery */
 
