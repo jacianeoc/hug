@@ -37,7 +37,6 @@
                     <p>Paraiba</p>
                 </footer>
             </aside>
-        
             
             <div id="mapid" class="animate-appear"></div>
 
@@ -45,7 +44,18 @@
                 <img src="/images/Union.svg" alt="criar centro de adoção" >
 
             </a>
-
+            <div class="centers">
+                {{#each centers}}
+                    <span hidden 
+                    data-id="{{this.id}}"
+                    data-name="{{this.name}}"
+                    data-lat="{{this.lat}}"
+                    data-lng="{{this.lng}}"
+            
+                    ></span>
+                {{/each}}
+            </div>
+            
         </div>
         <script src="/scripts/page-centers.js"></script>
     </body>

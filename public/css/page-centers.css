@@ -6,7 +6,7 @@
 
 }
 #logo{
-    width:clamp(6rem, 9vw, 12rem);
+    width:clamp(4rem, 7vw, 9rem);
 }
 
 header{
@@ -14,19 +14,19 @@ header{
     flex-direction:column;
 }
 aside{
-    width: clamp(15rem, 26vw, 32rem);
+    width: clamp(12rem, 23vw, 229rem);
     background: linear-gradient(329.54deg,#03FD94  0%,#6bd6a9 100%) no-repeat;
     padding: clamp(2rem, 4vw, 6rem);
     display: flex;
     flex-direction:column;
 }
 aside h2 {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     font: 800 clamp(2rem, 3vw, 4rem)/1 'Nunito', sans-serif;
 }
 aside p {
     margin-top: 2.4rem;
-    font: 400 clamp(1rem, 2.5vw, 2.3rem)/1.1 'Nunito', sans-serif;
+    font: 400 clamp(1rem, 2vw, 2.3rem)/1.1 'Nunito', sans-serif;
 }
 aside footer{
     line-height: 0;
