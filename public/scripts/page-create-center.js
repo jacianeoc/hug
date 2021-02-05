@@ -14,8 +14,6 @@ const icon= L.icon({
 });
 
 let marker;
-console.log(marker);
-
 /*create and add marker*/
 map.on('click', (event)=>{
 
@@ -103,4 +101,20 @@ function toggleSelect(event) {
     //verificar se e sim ou nao
     input.value = button.dataset.value
 
+}
+
+function validate(event) {
+    //aqui ele pega o name que tem o valor lat e lng 
+    //validar se lat e lngestão validados
+    const lat = document.querySelector('[name="lat"]').value;
+    const lng = document.querySelector('[name="lng"]').value;
+
+    console.log('aqui  é nos: ' + lat);
+    console.log('aqui é a longitude ' + lng);
+    if(lat=== '' && lng===''){
+        alert('preencha os campos');
+        event.preventDefault();
+    }
+    
+    
 }

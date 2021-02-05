@@ -5,9 +5,11 @@ const pages = require('./pages.js');
 
 const server = express();
 
-
 //criando uma rota 
 server
+
+//utilizar o body do reque
+.use(express.urlencoded({extended: true}))
 //utilizando arquivos estáricos 
 .use(express.static('public'))
 
@@ -20,5 +22,6 @@ server
 .get('/center', pages.center)
 .get('/centers', pages.centers)
 .get('/create-center', pages.createCenter)
+.post('/save-center', pages.saveCenter)
 //ligar o servidor
 server.listen(5500)
